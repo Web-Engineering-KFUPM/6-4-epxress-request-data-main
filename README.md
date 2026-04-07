@@ -3,7 +3,10 @@
 ## Short Overview
 In this lab you will practice reading **request data** in Express: query‑string parameters, route parameters, and simple middleware that validates/normalizes input. You’ll implement a small API that echoes values, composes names, and validates numeric parameters.
 
-> **Note:** Follow `server.js` to implement the lab. The file contains TODO blocks that describe exactly what to build.
+> **Note:**
+> Please follow the `server.js` file to implement the TODOs.
+>  
+> **Due Date:** 8 April, 2026, **8:59 PM**
 
 ## Reading Assignment
 - 6.5 Express request data
