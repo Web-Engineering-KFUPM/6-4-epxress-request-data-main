@@ -9,7 +9,7 @@ LAB SETUP INSTRUCTIONS
 
 1. Navigate to the project directory:
    Open your terminal and run:
-      cd 6-3-express-request-data
+      cd 6-4-express-request-data
 
 2. Install project dependencies:
    Run either of these commands:
@@ -18,7 +18,7 @@ LAB SETUP INSTRUCTIONS
       npm install
       npm install express cors
 
-3. Start the back-end server from terminal, path: 6-3-express-request-data-Dromarjh-main\6-3-express-request-data:
+3. Start the back-end server from terminal, path: 6-4-express-request-data-main\6-4-express-request-data:
    Run:
       node server.js
 
