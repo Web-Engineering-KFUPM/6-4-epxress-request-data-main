@@ -124,5 +124,69 @@ LAB SETUP INSTRUCTIONS
 
 // Route params: /users/:userId route
 
+import express from "express";
 
+const app = express();
+
+/* Root route so http://localhost:3000 shows server is up */
+app.get("/", (req, res) => {
+  res.send("Server is up");
+});
+
+/* TODO-2: /echo route */
+app.get("/echo", (req, res) => {
+  const { name, age } = req.query;
+
+  if (!name || !age) {
+    return res.status(400).json({
+      ok: false,
+      error: "name & age required",
+    });
+  }
+
+  return res.json({
+    ok: true,
+    name,
+    age,
+    msg: `Hello ${name}, you are ${age}`,
+  });
+});
+
+/* TODO-3: /profile/:first/:last route */
+app.get("/profile/:first/:last", (req, res) => {
+  const { first, last } = req.params;
+
+  return res.json({
+    ok: true,
+    fullName: `${first} ${last}`,
+  });
+});
+
+/* TODO-4: param middleware for userId */
+app.param("userId", (req, res, next, userId) => {
+  const id = Number(userId);
+
+  if (!Number.isInteger(id) || id <= 0) {
+    return res.status(400).json({
+      ok: false,
+      error: "userId must be positive number",
+    });
+  }
+
+  req.userIdNum = id;
+  next();
+});
+
+/* TODO-5: /users/:userId route */
+app.get("/users/:userId", (req, res) => {
+  return res.json({
+    ok: true,
+    userId: req.userIdNum,
+  });
+});
+
+/* TODO-1: create server */
+app.listen(3000, () => {
+  console.log("API running at http://localhost:3000");
+});
 
