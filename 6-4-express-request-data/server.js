@@ -104,8 +104,10 @@ LAB SETUP INSTRUCTIONS
  *
  */
 
-import express from "express";
-const app = express();
+//import express and cors
+
+
+// create express app instance
 
 
 // create server
