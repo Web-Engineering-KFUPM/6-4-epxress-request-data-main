@@ -16,7 +16,7 @@ LAB SETUP INSTRUCTIONS
       npm i
       OR
       npm install
-      npm install express cors
+      npm install express
 
 3. Start the back-end server from terminal, path: 6-4-express-request-data-main\6-4-express-request-data:
    Run:
@@ -104,13 +104,11 @@ LAB SETUP INSTRUCTIONS
  *
  */
 
-//import express and cors
+//import express
 
 
-// create express app instance
+// create express app instance to create web server
 
-
-// create server
 
 
 // Query params: /echo?name=Ali&age=22
@@ -123,4 +121,8 @@ LAB SETUP INSTRUCTIONS
 
 
 // Route params: /users/:userId route
+
+
+// Start the server by listening
+
 
